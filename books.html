@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Books | Obofam</title>
   <meta name="description" content="Obofamの書籍一覧。名義ごとに並ぶKindle本を紹介します。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://obofam.github.io/portfolio/books.html">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#2E7F6E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="Books | Obofam">
+  <meta property="og:description" content="Obofamの書籍一覧。名義ごとに並ぶKindle本を紹介します。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Obofam">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://obofam.github.io/portfolio/books.html">
+  <meta property="og:image" content="https://obofam.github.io/portfolio/image.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">コンテンツへスキップ</a>
@@ -147,6 +158,58 @@
       }, { threshold: 0.1 });
       els.forEach(function(el){ io.observe(el); });
     })();
+  </script>
+
+  <!-- SEO: Breadcrumb + Books structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://obofam.github.io/portfolio/"},
+          {"@type": "ListItem", "position": 2, "name": "Books", "item": "https://obofam.github.io/portfolio/books.html"}
+        ]
+      },
+      {
+        "@type": "Book",
+        "name": "AI時代の出版革命 : AI初心者が3日で電子書籍を出版する方法",
+        "author": {"@type": "Person", "name": "Obock from AI Campus"},
+        "datePublished": "2024-08-01",
+        "inLanguage": "ja",
+        "image": "https://m.media-amazon.com/images/I/51b-nNI3frL._SY466_.jpg",
+        "url": "https://amzn.asia/d/4lTM9JO"
+      },
+      {
+        "@type": "Book",
+        "name": "おうちで未来を楽しむ：家族とAIのゆるっとガイド: AI時代の家族の知恵袋：テクノロジーと投資で描く明るい未来",
+        "author": {"@type": "Person", "name": "Obock from AI Campus"},
+        "datePublished": "2024-07-01",
+        "inLanguage": "ja",
+        "image": "https://m.media-amazon.com/images/I/41D5HWMoCZL._SY445_SX342_ControlCacheEqualizer_.jpg",
+        "url": "https://amzn.asia/d/dnGE4aS"
+      },
+      {
+        "@type": "Book",
+        "name": "そのブロックタウン、リアルに住めるのか！？: 宅建士がくそ真面目に大検証！！",
+        "author": {"@type": "Person", "name": "松永 慶"},
+        "datePublished": "2025-09-01",
+        "inLanguage": "ja",
+        "image": "https://m.media-amazon.com/images/I/512OWGYiXDL._SY445_SX342_ControlCacheEqualizer_.jpg",
+        "url": "https://amzn.asia/d/1a0lCdc"
+      },
+      {
+        "@type": "Book",
+        "name": "親の空き家で“後悔ゼロ”相続と活用の完全ガイド: 宅建士が教える〈放置→負債〉を防ぐ決断術",
+        "author": {"@type": "Person", "name": "松永 慶"},
+        "datePublished": "2025-05-01",
+        "inLanguage": "ja",
+        "image": "https://m.media-amazon.com/images/I/517aa55ON1L._SY445_SX342_ControlCacheEqualizer_.jpg",
+        "url": "https://amzn.asia/d/6jfMv3J"
+      }
+    ]
+  }
   </script>
 
   <footer class="site-footer">
