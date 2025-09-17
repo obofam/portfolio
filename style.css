@@ -199,7 +199,8 @@ a:hover{text-decoration:underline}
 
 /* Muted style for placeholder/disabled buttons */
 a.btn[href="#"],
-.btn[aria-label*="Coming soon"]{
+.btn[aria-label*="Coming soon"],
+.btn[aria-disabled="true"]{
   background: var(--surface-alt);
   color: var(--text-muted);
   border-color: var(--border);
@@ -215,7 +216,8 @@ a.btn[href="#"],
 .social-link{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border);border-radius:9999px;background:var(--surface);color:inherit;text-decoration:none;font-weight:600;font-size:14px}
 .social-link:hover{background:var(--bg-soft);text-decoration:none}
 /* Muted state for footer links with no URL */
-.social-link[href="#"]{
+.social-link[href="#"],
+.social-link[aria-disabled="true"]{
   background: var(--surface-alt);
   color: var(--text-muted);
   border-color: var(--border);
