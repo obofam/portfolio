@@ -169,7 +169,7 @@ a:hover{text-decoration:underline}
 }
 .lab-link{
   display:flex; align-items:center; gap:12px; padding:12px 14px;
-  text-decoration:none; color:inherit;
+  text-decoration:none; color:inherit; position: relative;
 }
 .lab-link .title{ font-weight:700; letter-spacing:.2px }
 .lab-link .desc{ color:var(--text-muted); font-size:14px; }
@@ -231,6 +231,11 @@ a.external:not(.btn):not(.social-link):not(.book-cover)::after{
   content: "↗"; margin-left:6px; color:var(--accent-ink); font-size:.9em;
 }
 .announce a.external::after{ content:none }
+/* Right-edge arrow for Lab external links */
+.lab-link.external::after{
+  content:"↗"; position:absolute; right:14px; top:50%; transform:translateY(-50%);
+  color:var(--accent-ink); font-size:14px; margin-left:0;
+}
 
 /* Skip link */
 .skip-link{position:absolute;left:-9999px;top:auto}
