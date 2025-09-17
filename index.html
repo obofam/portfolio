@@ -243,6 +243,34 @@
       btn.setAttribute('aria-expanded', String(!expanded));
       menu.classList.toggle('open');
     });
+
+    // Links: open all in new tab; external get extra label/icon
+    (function(){
+      const all = document.querySelectorAll('a[href]:not([href^="#"])');
+      all.forEach(a => {
+        // Always open in new tab
+        a.target = '_blank';
+        const rel = (a.getAttribute('rel')||'');
+        if (!/noopener/.test(rel) || !/noreferrer/.test(rel)) a.setAttribute('rel', (rel + ' noopener noreferrer').trim());
+
+        // External host? add external class for visual cue
+        try {
+          const u = new URL(a.href, location.href);
+          if (u.host !== location.host) {
+            a.classList.add('external');
+            if (!a.hasAttribute('aria-label')){
+              const txt = (a.textContent||'リンク').trim();
+              a.setAttribute('aria-label', txt + '（外部リンク・新規タブ）');
+            }
+          } else {
+            if (!a.hasAttribute('aria-label') && !a.classList.contains('btn') && !a.classList.contains('social-link')){
+              const txt = (a.textContent||'リンク').trim();
+              a.setAttribute('aria-label', txt + '（新規タブ）');
+            }
+          }
+        } catch(e){}
+      });
+    })();
   </script>
 </body>
 </html>

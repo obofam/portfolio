@@ -223,6 +223,12 @@ a.btn[href="#"],
   pointer-events: none;
 }
 
+/* External link indicator (text links only) */
+a.external:not(.btn):not(.social-link):not(.book-cover)::after{
+  content: "↗"; margin-left:6px; color:var(--accent-ink); font-size:.9em;
+}
+.announce a.external::after{ content:none }
+
 /* Skip link */
 .skip-link{position:absolute;left:-9999px;top:auto}
 .skip-link:focus{left:12px;top:12px;background:#000;color:#fff;padding:8px 12px;border-radius:8px}
