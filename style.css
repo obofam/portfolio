@@ -149,7 +149,7 @@ a:hover{text-decoration:underline}
 
 /* Announcement banner */
 .announce{ display:flex; align-items:center; gap:10px; padding:12px 14px; border:1px solid var(--border); background:var(--surface-alt); border-radius:12px; margin:12px 0 16px }
-.announce .badge{ display:inline-block; padding:2px 8px; border-radius:9999px; background:var(--accent); color:var(--on-accent); font-weight:700; font-size:12px; letter-spacing:.2px }
+.announce .badge{ display:inline-block; padding:2px 6px; border-radius:999px; background:#eaf6ee; color:#2f7a4b; font-size:12px }
 .announce a{ color:var(--accent-ink); font-weight:600; text-decoration:none }
 .announce a:hover{ text-decoration:underline }
 .announce .arrow{ margin-left:auto; color:var(--accent-ink) }
