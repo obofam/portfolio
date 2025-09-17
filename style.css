@@ -13,6 +13,7 @@
   --text:#0F172A;
   --text-muted:#475569;
   --border:#E5E7EB;
+  --border-strong:#CBD5E1; /* 濃いめの境界線（フッター等） */
 
   --primary:#1F7A54;      /* 濃い自然グリーン（ボタン・リンク） */
   --accent-green:#2FA66A; /* 差し色（背景・タグなど） */
@@ -194,7 +195,7 @@ a:hover{text-decoration:underline}
   padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:600;text-decoration:none}
 .btn-primary{background:var(--accent-strong);color:var(--on-accent)}
 .btn-primary:hover{text-decoration:none;filter:saturate(105%) brightness(98%)}
-.btn-ghost{background:var(--surface);border-color:var(--border);color:var(--text)}
+.btn-ghost{background:var(--surface);border-color:var(--border-strong);color:var(--text)}
 .btn-ghost:hover{background:var(--bg-soft)}
 
 /* Muted style for placeholder/disabled buttons */
@@ -213,8 +214,8 @@ a.btn[href="#"],
 .foot-grid{display:grid;align-items:center;gap:12px;grid-template-columns:1fr}
 @media (min-width:768px){.foot-grid{grid-template-columns:auto 1fr auto}}
 .socials{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.social-link{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border);border-radius:9999px;background:var(--surface);color:inherit;text-decoration:none;font-weight:600;font-size:14px}
-.social-link:hover{background:var(--bg-soft);text-decoration:none}
+.social-link{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border-strong);border-radius:9999px;background:var(--surface);color:var(--text);text-decoration:none;font-weight:600;font-size:14px}
+.social-link:hover{background:var(--bg-soft);text-decoration:none;border-color:var(--accent-ink)}
 /* Muted state for footer links with no URL */
 .social-link[href="#"],
 .social-link[aria-disabled="true"]{
@@ -268,6 +269,7 @@ a.external:not(.btn):not(.social-link):not(.book-cover)::after{
     --text:#E5E7EB;
     --text-muted:#A8B1C5;
     --border:#1E2A44;
+    --border-strong:#2A3A5F;
     --accent:#3EC98F;   /* ダークでは少し明るめ */
     --accent-2:#1C2245; /* うすい青紫の暗色版 */
     --focus:#8F96FF;
