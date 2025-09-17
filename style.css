@@ -231,6 +231,8 @@ a.external:not(.btn):not(.social-link):not(.book-cover)::after{
   content: "↗"; margin-left:6px; color:var(--accent-ink); font-size:.9em;
 }
 .announce a.external::after{ content:none }
+/* Avoid double arrow where we already render one inside link */
+.lab-link.external::after{ content:none }
 
 /* Skip link */
 .skip-link{position:absolute;left:-9999px;top:auto}
