@@ -128,8 +128,11 @@ a:hover{text-decoration:underline}
   border:1px solid var(--chip-border); background:var(--chip-bg);
   color:var(--chip-fg); font-size:12px; font-weight:600; letter-spacing:.2px;
 }
-.project-grid .summary{color:var(--text-muted)}
-.project-grid .actions{margin-top:12px}
+ .project-grid .summary{color:var(--text-muted)}
+ /* Make project cards a vertical flex container so actions can stick to bottom */
+ .project-grid .card{ display:flex; flex-direction:column }
+ /* Push actions area to the bottom of the card */
+ .project-grid .actions{ margin-top:auto }
 
 /* Books list */
 .group-title{ font-size:clamp(18px,2.4vw,22px); margin:32px 0 10px }
